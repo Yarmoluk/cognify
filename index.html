@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cognify — Knowledge Graph Intelligence</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; background: #0a0a0a; color: #e4e4e7; min-height: 100vh; }
+
+  .container { max-width: 640px; margin: 0 auto; padding: 32px 24px; }
+
+  h1 { font-size: 32px; font-weight: 900; letter-spacing: -1px; margin-bottom: 4px; }
+  h1 span { color: #3b82f6; }
+
+  .tagline { font-size: 15px; color: #a1a1aa; margin-bottom: 28px; line-height: 1.5; }
+
+  .divider { height: 1px; background: #27272a; margin: 24px 0; }
+
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 2px; color: #3b82f6; font-weight: 700; margin-bottom: 14px; }
+
+  .problem { font-size: 18px; font-weight: 700; color: #fafafa; line-height: 1.5; margin-bottom: 10px; }
+
+  .answer { font-size: 15px; color: #a1a1aa; line-height: 1.6; margin-bottom: 20px; }
+
+  .stack { background: #18181b; border: 1px solid #27272a; border-radius: 12px; padding: 20px; margin: 20px 0; font-family: 'SF Mono', 'Fira Code', monospace; font-size: 13px; line-height: 2; color: #a1a1aa; }
+  .stack .layer { color: #fafafa; font-weight: 700; }
+  .stack .you { color: #3b82f6; font-weight: 700; }
+  .stack .dim { color: #52525b; }
+
+  .vs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
+
+  .vs-card { background: #18181b; border: 1px solid #27272a; border-radius: 10px; padding: 14px; }
+  .vs-card.bad { border-color: #dc2626; }
+  .vs-card.good { border-color: #22c55e; }
+  .vs-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; margin-bottom: 8px; }
+  .vs-card.bad .vs-label { color: #dc2626; }
+  .vs-card.good .vs-label { color: #22c55e; }
+  .vs-card p { font-size: 13px; color: #a1a1aa; line-height: 1.5; }
+
+  .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 20px 0; }
+  .stat { background: #18181b; border: 1px solid #27272a; border-radius: 10px; padding: 14px; text-align: center; }
+  .stat .num { font-size: 28px; font-weight: 900; color: #3b82f6; line-height: 1; }
+  .stat .label { font-size: 10px; color: #71717a; text-transform: uppercase; letter-spacing: 1px; margin-top: 6px; }
+
+  .quote { background: #18181b; border-left: 3px solid #3b82f6; border-radius: 0 10px 10px 0; padding: 16px 18px; margin: 20px 0; font-size: 15px; font-style: italic; color: #d4d4d8; line-height: 1.6; }
+
+  .cta { background: #3b82f6; color: white; border-radius: 12px; padding: 20px; text-align: center; margin: 24px 0; }
+  .cta .big { font-size: 18px; font-weight: 800; margin-bottom: 6px; }
+  .cta .sub { font-size: 13px; opacity: 0.85; }
+
+  .contact { text-align: center; font-size: 13px; color: #71717a; margin-top: 20px; }
+  .contact a { color: #3b82f6; text-decoration: none; }
+
+  .badge-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
+  .badge { background: #27272a; color: #a1a1aa; font-size: 11px; padding: 4px 10px; border-radius: 20px; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Cognify<span>.</span></h1>
+<div class="tagline">I build the knowledge layer that makes AI actually work for your business.</div>
+
+<div class="divider"></div>
+
+<h2>The Problem</h2>
+<div class="problem">AI is smart but doesn't know your business.</div>
+<div class="answer">ChatGPT has read the entire internet. But it's never worked a day in your industry. It guesses. It hallucinates. It gives you generic answers when you need specific ones.</div>
+
+<h2>The Fix</h2>
+<div class="problem">A knowledge graph — a structured map of how your domain actually works.</div>
+<div class="answer">200 concepts. Real relationships. Customers, problems, products, competitors, objections, pricing — all connected. AI doesn't guess anymore. It traverses your graph. It reasons like someone who's worked in your business for 20 years.</div>
+
+<div class="stack">
+  <span class="dim">┌─────────────────────────────────────┐</span><br>
+  <span class="dim">│</span> <span class="layer">Your Users / Clients / Apps</span> <span class="dim">│</span><br>
+  <span class="dim">├─────────────────────────────────────┤</span><br>
+  <span class="dim">│</span> <span class="layer">AI Model</span> (Claude, GPT, any) <span class="dim">│</span><br>
+  <span class="dim">├─────────────────────────────────────┤</span><br>
+  <span class="dim">│</span> <span class="you">KNOWLEDGE GRAPH — Cognify</span> <span class="dim">│</span> ← this<br>
+  <span class="dim">├─────────────────────────────────────┤</span><br>
+  <span class="dim">│</span> <span class="layer">Your Data / Docs / Expertise</span> <span class="dim">│</span><br>
+  <span class="dim">└─────────────────────────────────────┘</span>
+</div>
+
+<div class="answer">The graph sits between your raw data and the AI. It compresses 20 years of expertise into structured intelligence. Any AI model plugs in on top. No vendor lock-in. No fine-tuning. Updatable in real-time.</div>
+
+<h2>Without vs. With</h2>
+<div class="vs-grid">
+  <div class="vs-card bad">
+    <div class="vs-label">Without Cognify</div>
+    <p>AI guesses from raw text. Hallucinates details. Generic output. Can't explain why. Breaks under complex questions.</p>
+  </div>
+  <div class="vs-card good">
+    <div class="vs-label">With Cognify</div>
+    <p>AI traverses verified knowledge. Domain-specific output. Explainable — every answer traces to a source. Multi-hop reasoning across concepts.</p>
+  </div>
+</div>
+
+<h2>The Math: Why Graphs Win</h2>
+
+<div class="stat-row">
+  <div class="stat">
+    <div class="num" style="color:#22c55e;">170x</div>
+    <div class="label">More Reasoning Paths</div>
+  </div>
+  <div class="stat">
+    <div class="num" style="color:#22c55e;">77%</div>
+    <div class="label">Higher Accuracy (HopRAG)</div>
+  </div>
+  <div class="stat">
+    <div class="num" style="color:#22c55e;">1/10</div>
+    <div class="label">The Cost of Fine-Tuning</div>
+  </div>
+</div>
+
+<div class="answer">A 200-concept graph with ~4 edges per concept creates <strong style="color:#fafafa;">~17,000 traversable reasoning paths</strong>. Standard RAG retrieves ~100 isolated text chunks. That's 170x more ways for the AI to reason about your domain — not because it has more data, but because it has <em>structure</em>. Each relationship is a path the AI can walk. Each hop multiplies the possible reasoning chains exponentially.</div>
+
+<div class="stack">
+  <span class="dim">RAG (flat text):</span><br>
+  <span class="layer">Query → retrieve 10 chunks → guess answer</span><br>
+  <span style="color:#dc2626;">~100 possible connections. One hop. Linear.</span><br><br>
+  <span class="dim">Knowledge Graph:</span><br>
+  <span class="you">Query → traverse graph → 3-5 hops → verified answer</span><br>
+  <span style="color:#22c55e;">~17,000 reasoning paths. Multi-hop. Exponential.</span>
+</div>
+
+<h2>Why Not Just...</h2>
+<div class="vs-grid">
+  <div class="vs-card bad">
+    <div class="vs-label">RAG / Vector Search</div>
+    <p>Finds text chunks. Doesn't understand relationships. Breaks on complex, multi-step questions.</p>
+  </div>
+  <div class="vs-card good">
+    <div class="vs-label">Knowledge Graph</div>
+    <p>Models how things connect. Multi-hop reasoning. 77% more accurate on complex queries (HopRAG, 2025).</p>
+  </div>
+</div>
+<div class="vs-grid">
+  <div class="vs-card bad">
+    <div class="vs-label">Fine-Tuning</div>
+    <p>$50K+. Months to train. Can't update. Black box. Locked to one model vendor.</p>
+  </div>
+  <div class="vs-card good">
+    <div class="vs-label">Knowledge Graph</div>
+    <p>$5-15K. Built in days. Update anytime. Fully explainable. Works with any AI model.</p>
+  </div>
+</div>
+
+<h2>Proof</h2>
+<div class="stat-row">
+  <div class="stat">
+    <div class="num">9</div>
+    <div class="label">Verticals Built</div>
+  </div>
+  <div class="stat">
+    <div class="num">36</div>
+    <div class="label">AI Skills Deployed</div>
+  </div>
+  <div class="stat">
+    <div class="num">200+</div>
+    <div class="label">Concepts Per Graph</div>
+  </div>
+</div>
+
+<div class="badge-row">
+  <span class="badge">Cybersecurity</span>
+  <span class="badge">Legal / IP</span>
+  <span class="badge">Construction</span>
+  <span class="badge">Education</span>
+  <span class="badge">Hospitality</span>
+  <span class="badge">Tactical Training</span>
+  <span class="badge">Healthcare</span>
+  <span class="badge">Financial Services</span>
+  <span class="badge">SaaS / B2B</span>
+</div>
+
+<div class="quote">
+  "I don't sell AI. I sell the knowledge layer that makes AI actually work. The graph is the product. Everything else is a feature."
+</div>
+
+<div class="cta">
+  <div class="big">Free 2-hour live demo.</div>
+  <div class="sub">I'll build a piece of your knowledge graph in real-time. You keep the output. No obligation.</div>
+</div>
+
+<div class="contact">
+  <strong>Dan Yarmoluk</strong> — Cognify by VeritAI<br>
+  Graduate Instructor, University of St. Thomas<br>
+  <a href="mailto:daniel.yarmoluk@gmail.com">daniel.yarmoluk@gmail.com</a>
+</div>
+
+</div>
+</body>
+</html>
