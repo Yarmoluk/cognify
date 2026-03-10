@@ -100,18 +100,22 @@
 
 <h2>The Math: Why Graphs Win</h2>
 
-<div class="stat-row">
+<div class="stat-row" style="grid-template-columns: repeat(4, 1fr);">
   <div class="stat">
     <div class="num" style="color:#22c55e;">170x</div>
     <div class="label">More Reasoning Paths</div>
   </div>
   <div class="stat">
     <div class="num" style="color:#22c55e;">77%</div>
-    <div class="label">Higher Accuracy (HopRAG)</div>
+    <div class="label">Higher Accuracy</div>
+  </div>
+  <div class="stat">
+    <div class="num" style="color:#22c55e;">83%</div>
+    <div class="label">Win Rate vs RAG</div>
   </div>
   <div class="stat">
     <div class="num" style="color:#22c55e;">1/10</div>
-    <div class="label">The Cost of Fine-Tuning</div>
+    <div class="label">Cost of Fine-Tuning</div>
   </div>
 </div>
 
@@ -124,6 +128,10 @@
   <span class="dim">Knowledge Graph:</span><br>
   <span class="you">Query → traverse graph → 3-5 hops → verified answer</span><br>
   <span style="color:#22c55e;">~17,000 reasoning paths. Multi-hop. Exponential.</span>
+</div>
+
+<div class="answer" style="font-size:12px; color:#52525b; margin-top:8px;">
+  <strong style="color:#71717a;">Research:</strong> HopRAG (ACL 2025) — 77% higher accuracy on multi-hop QA vs. dense retrieval. Microsoft GraphRAG — 83% win rate on comprehensiveness vs. vector RAG. StepChain GraphRAG (2025) — current SOTA, beats all prior methods.
 </div>
 
 <h2>Why Not Just...</h2>
